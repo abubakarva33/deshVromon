@@ -11,6 +11,7 @@ export const hotels = [
         type: 'resort',
         rating: 4.5,
         totalReviews: 842,
+        pricePerNight: 8000,
         priceRange: {
             min: 8000,
             max: 25000,
@@ -42,6 +43,7 @@ export const hotels = [
         type: 'hotel',
         rating: 4.2,
         totalReviews: 523,
+        pricePerNight: 4000,
         priceRange: {
             min: 4000,
             max: 10000,
@@ -53,7 +55,7 @@ export const hotels = [
             address: 'Beach Road, Cox\'s Bazar',
             coordinates: { lat: 21.4294, lng: 91.9794 },
         },
-        amenities: ['WiFi', 'Restaurant', 'Room Service', 'Parking', 'AC'],
+        amenities: ['wifi', 'restaurant', 'parking'],
         roomTypes: [
             { type: 'Standard', price: 4000, capacity: 2 },
             { type: 'Deluxe', price: 7000, capacity: 3 },
@@ -70,6 +72,7 @@ export const hotels = [
         type: 'resort',
         rating: 4.3,
         totalReviews: 312,
+        pricePerNight: 3500,
         priceRange: {
             min: 3500,
             max: 8000,
@@ -81,7 +84,7 @@ export const hotels = [
             address: 'Nilgiri Hills, Bandarban',
             coordinates: { lat: 21.8500, lng: 92.3500 },
         },
-        amenities: ['Restaurant', 'Mountain View', 'Parking', 'Basic Rooms'],
+        amenities: ['restaurant', 'parking', 'breakfast'],
         roomTypes: [
             { type: 'Standard Cottage', price: 3500, capacity: 2 },
             { type: 'Deluxe Cottage', price: 6000, capacity: 3 },
@@ -98,6 +101,7 @@ export const hotels = [
         type: 'hotel',
         rating: 4.0,
         totalReviews: 421,
+        pricePerNight: 3000,
         priceRange: {
             min: 3000,
             max: 7000,
@@ -109,7 +113,7 @@ export const hotels = [
             address: 'Zindabazar, Sylhet',
             coordinates: { lat: 24.8949, lng: 91.8687 },
         },
-        amenities: ['WiFi', 'Restaurant', 'Room Service', 'AC', 'Parking'],
+        amenities: ['wifi', 'restaurant', 'parking'],
         roomTypes: [
             { type: 'Standard', price: 3000, capacity: 2 },
             { type: 'Deluxe', price: 5000, capacity: 2 },
@@ -126,6 +130,7 @@ export const hotels = [
         type: 'hotel',
         rating: 3.8,
         totalReviews: 234,
+        pricePerNight: 2500,
         priceRange: {
             min: 2500,
             max: 5000,
@@ -137,7 +142,7 @@ export const hotels = [
             address: 'KDA Avenue, Khulna',
             coordinates: { lat: 22.8456, lng: 89.5403 },
         },
-        amenities: ['Restaurant', 'WiFi', 'AC', 'Parking'],
+        amenities: ['wifi', 'restaurant', 'parking'],
         roomTypes: [
             { type: 'Standard', price: 2500, capacity: 2 },
             { type: 'Deluxe', price: 4000, capacity: 3 },
