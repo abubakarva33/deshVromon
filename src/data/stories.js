@@ -71,9 +71,28 @@ export const stories = [
     },
 ];
 
+// Helper functions
 export const getStoryById = (id) => stories.find(s => s.id === id);
-export const getStoriesByAuthor = (authorId) => stories.filter(s => s.author === authorId);
-export const getStoriesByDestination = (destinationId) => stories.filter(s => s.destination === destinationId);
-export const getFeaturedStories = (limit = 3) => stories.filter(s => s.featured).slice(0, limit);
+
+export const getFeaturedStories = (limit = 10) => {
+    return stories
+        .filter(s => s.featured)
+        .sort((a, b) => b.likes - a.likes)
+        .slice(0, limit);
+};
+
+export const getRecentStories = (limit = 20) => {
+    return stories
+        .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+        .slice(0, limit);
+};
+
+export const getStoriesByDestination = (destinationId) => {
+    return stories.filter(s => s.destination === destinationId);
+};
+
+export const getStoriesByAuthor = (authorId) => {
+    return stories.filter(s => s.author === authorId);
+};
 
 export default stories;
