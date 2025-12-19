@@ -3,6 +3,8 @@
  * Tourist spots across Bangladesh with detailed information
  */
 
+import { additionalDestinations } from './destinations-extended';
+
 export const destinations = [
     // Dhaka
     {
@@ -380,6 +382,9 @@ export const destinations = [
         reviews: 4.6,
         totalReviews: 4932,
     },
+
+    // Merge additional 85+ destinations
+    ...additionalDestinations,
 ];
 
 // Helper functions
