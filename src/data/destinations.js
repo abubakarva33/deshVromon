@@ -1,0 +1,418 @@
+/**
+ * Destinations Data
+ * Tourist spots across Bangladesh with detailed information
+ */
+
+export const destinations = [
+    // Dhaka
+    {
+        id: 'lalbagh-fort',
+        name: 'Lalbagh Fort',
+        nameBn: 'লালবাগ কেল্লা',
+        district: 'dhaka',
+        slug: 'lalbagh-fort',
+        type: 'historical',
+        description: 'An incomplete 17th-century Mughal fort complex that stands in Dhaka. Originally known as Fort Aurangabad, it was built during the reign of Mughal Emperor Aurangzeb.',
+        longDescription: 'Lalbagh Fort (also known as Fort Aurangabad) is an incomplete 17th-century Mughal fort complex in Dhaka, Bangladesh. Construction was started in 1678 AD by Mughal Subahdar Muhammad Azam Shah, who was the son of Emperor Aurangzeb. The fort has three magnificent gates and several monuments including the tomb of Bibi Pari, the Lalbagh Mosque, and the Diwan-i-Aam. The fort is a magnificent example of Mughal architecture and is one of the most visited tourist spots in Dhaka.',
+        images: [
+            '/images/destinations/lalbagh-fort-1.jpg',
+            '/images/destinations/lalbagh-fort-2.jpg',
+            '/images/destinations/lalbagh-fort-3.jpg',
+        ],
+        hypePercentage: 85,
+        bestSeason: ['Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar'],
+        activities: ['Photography', 'Historical Tour', 'Museum Visit', 'Architecture Study'],
+        entryFee: { local: 20, foreign: 200 },
+        openingHours: '10:00 AM - 5:00 PM (Closed on Thursday)',
+        visitDuration: '2-3 hours',
+        coordinates: { lat: 23.7196, lng: 90.3867 },
+        nearbySpots: ['ahsan-manzil', 'star-mosque', 'shankhari-bazar'],
+        facilities: ['Parking', 'Restrooms', 'Museum', 'Guide Service'],
+        bestFor: ['History Lovers', 'Photographers', 'Students', 'Families'],
+        tags: ['mughal', 'fort', 'museum', 'architecture', 'heritage'],
+        reviews: 4.3,
+        totalReviews: 2847,
+    },
+    {
+        id: 'ahsan-manzil',
+        name: 'Ahsan Manzil',
+        nameBn: 'আহসান মঞ্জিল',
+        district: 'dhaka',
+        slug: 'ahsan-manzil',
+        type: 'historical',
+        description: 'The Pink Palace - a magnificent palace of the Nawab of Dhaka, now a museum showcasing the lifestyle of the Nawab family.',
+        longDescription: 'Ahsan Manzil, also known as the Pink Palace, is a magnificent palace situated on the banks of the Buriganga River in Dhaka. It was the official residential palace and seat of the Dhaka Nawab Family. The building is structured on a raised platform. The palace is divided into two parts: the eastern side and the western side. The dome is placed on the central round room.',
+        images: [
+            '/images/destinations/ahsan-manzil-1.jpg',
+            '/images/destinations/ahsan-manzil-2.jpg',
+        ],
+        hypePercentage: 78,
+        bestSeason: ['Nov', 'Dec', 'Jan', 'Feb', 'Mar'],
+        activities: ['Museum Visit', 'Photography', 'Historical Learning'],
+        entryFee: { local: 20, foreign: 100 },
+        openingHours: '10:30 AM - 5:30 PM (Closed on Thursday)',
+        visitDuration: '1-2 hours',
+        coordinates: { lat: 23.7085, lng: 90.4063 },
+        nearbySpots: ['lalbagh-fort', 'sadarghat', 'armenian-church'],
+        facilities: ['Museum', 'Photography', 'Guided Tours'],
+        bestFor: ['History Enthusiasts', 'Architecture Lovers'],
+        tags: ['palace', 'museum', 'nawab', 'pink-palace', 'heritage'],
+        reviews: 4.2,
+        totalReviews: 1523,
+    },
+
+    // Cox's Bazar
+    {
+        id: 'coxs-bazar-beach',
+        name: "Cox's Bazar Beach",
+        nameBn: 'কক্সবাজার সমুদ্র সৈকত',
+        district: 'coxs-bazar',
+        slug: 'coxs-bazar-beach',
+        type: 'beach',
+        description: 'The longest natural sea beach in the world, stretching 120 km along the Bay of Bengal.',
+        longDescription: "Cox's Bazar Beach is the world's longest unbroken sea beach, with a length of 120 km. It is located 152 km south of Chittagong. Cox's Bazar is also known by the name 'Panowa', which translates literally as 'yellow flower'. The beach is a popular tourist destination in Bangladesh and offers stunning sunrises and sunsets, beach activities, and fresh seafood.",
+        images: [
+            '/images/destinations/coxs-bazar-1.jpg',
+            '/images/destinations/coxs-bazar-2.jpg',
+            '/images/destinations/coxs-bazar-3.jpg',
+            '/images/destinations/coxs-bazar-4.jpg',
+        ],
+        hypePercentage: 95,
+        bestSeason: ['Nov', 'Dec', 'Jan', 'Feb', 'Mar'],
+        activities: ['Swimming', 'Surfing', 'Beach Sports', 'Sunset Viewing', 'Seafood', 'Photography'],
+        entryFee: { local: 0, foreign: 0 },
+        openingHours: '24/7',
+        visitDuration: '2-3 days recommended',
+        coordinates: { lat: 21.4272, lng: 92.0058 },
+        nearbySpots: ['inani-beach', 'himchari', 'laboni-point', 'marine-drive'],
+        facilities: ['Hotels', 'Restaurants', 'Beach Umbrellas', 'Water Sports'],
+        bestFor: ['Beach Lovers', 'Families', 'Honeymooners', 'Adventure Seekers'],
+        tags: ['beach', 'sea', 'longest-beach', 'sunset', 'tourism'],
+        reviews: 4.7,
+        totalReviews: 15234,
+    },
+    {
+        id: 'inani-beach',
+        name: 'Inani Beach',
+        nameBn: 'ইনানী সৈকত',
+        district: 'coxs-bazar',
+        slug: 'inani-beach',
+        type: 'beach',
+        description: 'A pristine beach with golden sand and coral stones, known for its natural beauty and crystal clear water.',
+        longDescription: 'Inani Beach is located about 32 km south of Cox\'s Bazar. The beach is famous for its golden sandy beaches, clear blue water, and the unique feature of having coral stones. The beach is less crowded compared to the main Cox\'s Bazar beach, offering a more serene and peaceful environment. During low tide, you can see beautiful coral stones scattered along the beach.',
+        images: [
+            '/images/destinations/inani-beach-1.jpg',
+            '/images/destinations/inani-beach-2.jpg',
+        ],
+        hypePercentage: 88,
+        bestSeason: ['Nov', 'Dec', 'Jan', 'Feb'],
+        activities: ['Beach Walk', 'Coral Watching', 'Photography', 'Swimming'],
+        entryFee: { local: 0, foreign: 0 },
+        openingHours: '24/7',
+        visitDuration: '3-4 hours',
+        coordinates: { lat: 21.2167, lng: 92.0583 },
+        nearbySpots: ['coxs-bazar-beach', 'himchari', 'marine-drive'],
+        facilities: ['Parking', 'Food Stalls', 'Rest Areas'],
+        bestFor: ['Nature Lovers', 'Photographers', 'Peace Seekers'],
+        tags: ['beach', 'coral', 'pristine', 'scenic'],
+        reviews: 4.6,
+        totalReviews: 3421,
+    },
+    {
+        id: 'himchari',
+        name: 'Himchari National Park',
+        nameBn: 'হিমছড়ি',
+        district: 'coxs-bazar',
+        slug: 'himchari',
+        type: 'nature',
+        description: 'A coastal national park featuring waterfalls, hills, and beautiful beaches.',
+        longDescription: 'Himchari National Park is located 18 km south of Cox\'s Bazar. The park features a beautiful waterfall that flows into the sea during monsoon season. The park encompasses hills covered with lush green vegetation and offers panoramic views of the Bay of Bengal. It\'s a perfect blend of hills and sea.',
+        images: [
+            '/images/destinations/himchari-1.jpg',
+            '/images/destinations/himchari-2.jpg',
+        ],
+        hypePercentage: 82,
+        bestSeason: ['Jun', 'Jul', 'Aug', 'Sep'], // Monsoon for waterfall
+        activities: ['Hiking', 'Waterfall Visit', 'Wildlife Watching', 'Photography'],
+        entryFee: { local: 50, foreign: 200 },
+        openingHours: '8:00 AM - 6:00 PM',
+        visitDuration: '2-3 hours',
+        coordinates: { lat: 21.3500, lng: 92.0200 },
+        nearbySpots: ['coxs-bazar-beach', 'inani-beach'],
+        facilities: ['Parking', 'Trails', 'Viewpoints'],
+        bestFor: ['Nature Lovers', 'Hikers', 'Photographers'],
+        tags: ['waterfall', 'national-park', 'hills', 'nature'],
+        reviews: 4.4,
+        totalReviews: 2103,
+    },
+
+    // Sylhet
+    {
+        id: 'ratargul',
+        name: 'Ratargul Swamp Forest',
+        nameBn: 'রাতারগুল জলাবন',
+        district: 'sylhet',
+        slug: 'ratargul',
+        type: 'nature',
+        description: 'The only freshwater swamp forest in Bangladesh, a hidden gem of natural beauty.',
+        longDescription: 'Ratargul Swamp Forest is a freshwater swamp forest located in Gowainghat, Sylhet. It is one of the few freshwater swamp forests in Bangladesh and the only one in the country that remains submerged underwater for a significant part of the year. The forest is accessible by boat and offers a unique experience of floating through a forest.',
+        images: [
+            '/images/destinations/ratargul-1.jpg',
+            '/images/destinations/ratargul-2.jpg',
+            '/images/destinations/ratargul-3.jpg',
+        ],
+        hypePercentage: 92,
+        bestSeason: ['Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+        activities: ['Boat Ride', 'Bird Watching', 'Photography', 'Nature Walk'],
+        entryFee: { local: 0, foreign: 0 },
+        boatFee: { small: 500, large: 1000 },
+        openingHours: '8:00 AM - 5:00 PM',
+        visitDuration: '2-3 hours',
+        coordinates: { lat: 25.0167, lng: 92.0833 },
+        nearbySpots: ['jaflong', 'bichnakandi', 'lalakhal'],
+        facilities: ['Boat Service', 'Guide Service'],
+        bestFor: ['Nature Lovers', 'Photographers', 'Adventure Seekers'],
+        tags: ['swamp-forest', 'boat-ride', 'unique', 'nature'],
+        reviews: 4.8,
+        totalReviews: 4523,
+    },
+    {
+        id: 'jaflong',
+        name: 'Jaflong',
+        nameBn: 'জাফলং',
+        district: 'sylhet',
+        slug: 'jaflong',
+        type: 'nature',
+        description: 'A scenic hill station on the India-Bangladesh border, known for stone collection and waterfalls.',
+        longDescription: 'Jaflong is a hill station and tourist spot in the Gowainghat Upazila of Sylhet. It is located at the border between Bangladesh and the Indian state of Meghalaya. The Mari River flows through the area, and the surrounding hills and waterfalls create a spectacular landscape. Stone collection from the riverbed is a common activity here.',
+        images: [
+            '/images/destinations/jaflong-1.jpg',
+            '/images/destinations/jaflong-2.jpg',
+        ],
+        hypePercentage: 89,
+        bestSeason: ['Nov', 'Dec', 'Jan', 'Feb', 'Mar'],
+        activities: ['Stone Collection Viewing', 'River Cruise', 'Photography', 'Cable Car Ride'],
+        entryFee: { local: 0, foreign: 0 },
+        openingHours: '24/7',
+        visitDuration: '4-5 hours',
+        coordinates: { lat: 25.1750, lng: 92.0000 },
+        nearbySpots: ['ratargul', 'lalakhal', 'tamabil'],
+        facilities: ['Restaurants', 'Boat Service', 'Cable Car'],
+        bestFor: ['Nature Lovers', 'Families', 'Photographers'],
+        tags: ['hills', 'river', 'border', 'scenic'],
+        reviews: 4.5,
+        totalReviews: 6234,
+    },
+
+    // Bandarban
+    {
+        id: 'nilgiri',
+        name: 'Nilgiri Hills',
+        nameBn: 'নীলগিরি',
+        district: 'bandarban',
+        slug: 'nilgiri',
+        type: 'hills',
+        description: 'The highest peak in Bandarban accessible by road, offering breathtaking cloud-touching views.',
+        longDescription: 'Nilgiri is one of the highest peaks in Bandarban, Bangladesh, standing at about 2,200 feet above sea level. The name "Nilgiri" means "Blue Mountain". On the way to Nilgiri, you can experience the thrill of driving through winding roads with hairpin bends. The peak often touches the clouds, creating a magical atmosphere. The resort at the top offers accommodation with stunning panoramic views.',
+        images: [
+            '/images/destinations/nilgiri-1.jpg',
+            '/images/destinations/nilgiri-2.jpg',
+            '/images/destinations/nilgiri-3.jpg',
+        ],
+        hypePercentage: 93,
+        bestSeason: ['Nov', 'Dec', 'Jan', 'Feb', 'Mar'],
+        activities: ['Mountain Viewing', 'Cloud Photography', 'Hiking', 'Camping'],
+        entryFee: { local: 50, foreign: 100 },
+        openingHours: '24/7',
+        visitDuration: '1 day recommended',
+        coordinates: { lat: 21.8500, lng: 92.3500 },
+        nearbySpots: ['chimbuk', 'thanchi', 'boga-lake'],
+        facilities: ['Resort', 'Restaurant', 'Parking', 'Army Checkpost'],
+        bestFor: ['Adventure Seekers', 'Nature Lovers', 'Photographers'],
+        tags: ['hills', 'clouds', 'peak', 'scenic', 'adventure'],
+        reviews: 4.7,
+        totalReviews: 8921,
+    },
+    {
+        id: 'nafakhum',
+        name: 'Nafakhum Waterfall',
+        nameBn: 'নাফাখুম জলপ্রপাত',
+        district: 'bandarban',
+        slug: 'nafakhum',
+        type: 'waterfall',
+        description: 'The largest waterfall in Bangladesh, a spectacular natural wonder in the remote hills.',
+        longDescription: 'Nafakhum waterfall is situated in the remote area of Thanchi upazila in Bandarban. It is considered the largest waterfall in Bangladesh. The Remakri River falls from a height creating this magnificent waterfall. To reach Nafakhum, one needs to take a challenging journey involving both boat rides and trekking through dense forests and hills.',
+        images: [
+            '/images/destinations/nafakhum-1.jpg',
+            '/images/destinations/nafakhum-2.jpg',
+        ],
+        hypePercentage: 90,
+        bestSeason: ['Oct', 'Nov', 'Dec', 'Jan', 'Feb'],
+        activities: ['Trekking', 'Boat Ride', 'Swimming', 'Photography', 'Camping'],
+        entryFee: { local: 0, foreign: 0 },
+        permitRequired: true,
+        openingHours: '24/7',
+        visitDuration: '2-3 days recommended',
+        coordinates: { lat: 21.6500, lng: 92.5500 },
+        nearbySpots: ['remakri', 'thanchi', 'tinap-saitar'],
+        facilities: ['Basic Accommodation', 'Guide Service Required'],
+        bestFor: ['Adventure Seekers', 'Experienced Trekkers'],
+        tags: ['waterfall', 'trekking', 'adventure', 'remote', 'nature'],
+        reviews: 4.9,
+        totalReviews: 3421,
+    },
+    {
+        id: 'boga-lake',
+        name: 'Boga Lake',
+        nameBn: 'বগা লেক',
+        district: 'bandarban',
+        slug: 'boga-lake',
+        type: 'lake',
+        description: 'A natural lake in the hills, surrounded by lush green mountains and indigenous villages.',
+        longDescription: 'Boga Lake is a natural lake situated in the Ruma Upazila of Bandarban. The lake is located at an altitude of approximately 1,246 feet above sea level. It is surrounded by high hills and dense forest. The lake is considered sacred by the Bawm indigenous community. The journey to Boga Lake involves trekking through beautiful mountain trails.',
+        images: [
+            '/images/destinations/boga-lake-1.jpg',
+            '/images/destinations/boga-lake-2.jpg',
+        ],
+        hypePercentage: 87,
+        bestSeason: ['Nov', 'Dec', 'Jan', 'Feb', 'Mar'],
+        activities: ['Trekking', 'Camping', 'Photography', 'Cultural Experience'],
+        entryFee: { local: 50, foreign: 100 },
+        permitRequired: true,
+        openingHours: '24/7',
+        visitDuration: '2 days recommended',
+        coordinates: { lat: 21.9667, lng: 92.3833 },
+        nearbySpots: ['keokradong', 'ruma-bazar'],
+        facilities: ['Camping Ground', 'Guide Service'],
+        bestFor: ['Trekkers', 'Nature Lovers', 'Adventure Seekers'],
+        tags: ['lake', 'trekking', 'camping', 'indigenous', 'remote'],
+        reviews: 4.7,
+        totalReviews: 2156,
+    },
+
+    // Rangamati
+    {
+        id: 'kaptai-lake',
+        name: 'Kaptai Lake',
+        nameBn: 'কাপ্তাই লেক',
+        district: 'rangamati',
+        slug: 'kaptai-lake',
+        type: 'lake',
+        description: 'The largest man-made lake in Bangladesh, created by the Kaptai Dam on the Karnaphuli River.',
+        longDescription: 'Kaptai Lake is the largest lake in Bangladesh. It is located in the Kaptai region of Rangamati. The lake was created as a result of building the Kaptai Dam on the Karnaphuli River in the early 1960s. The lake is a popular tourist destination and offers activities like boat rides, fishing, and island hopping. The surrounding hills and islands create a picturesque landscape.',
+        images: [
+            '/images/destinations/kaptai-lake-1.jpg',
+            '/images/destinations/kaptai-lake-2.jpg',
+            '/images/destinations/kaptai-lake-3.jpg',
+        ],
+        hypePercentage: 86,
+        bestSeason: ['Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar'],
+        activities: ['Boat Cruise', 'Island Hopping', 'Fishing', 'Photography'],
+        entryFee: { local: 0, foreign: 0 },
+        boatFee: { speedboat: 2000, engine: 1500 },
+        openingHours: '24/7',
+        visitDuration: '1 day',
+        coordinates: { lat: 22.4700, lng: 92.2167 },
+        nearbySpots: ['hanging-bridge', 'shuvolong-waterfall', 'chakma-rajbari'],
+        facilities: ['Boat Service', 'Hotels', 'Restaurants'],
+        bestFor: ['Families', 'Nature Lovers', 'Relaxation Seekers'],
+        tags: ['lake', 'boat-ride', 'islands', 'scenic'],
+        reviews: 4.5,
+        totalReviews: 5432,
+    },
+
+    // Sundarbans (Khulna)
+    {
+        id: 'sundarbans',
+        name: 'Sundarbans Mangrove Forest',
+        nameBn: 'সুন্দরবন',
+        district: 'khulna',
+        slug: 'sundarbans',
+        type: 'nature',
+        description: 'The largest mangrove forest in the world and home to the Royal Bengal Tiger. A UNESCO World Heritage Site.',
+        longDescription: 'The Sundarbans is the largest mangrove forest in the world, spanning across Bangladesh and India. The Bangladesh portion is a UNESCO World Heritage Site. It is home to the famous Royal Bengal Tiger, spotted deer, crocodiles, and numerous bird species. The forest is crisscrossed by a complex network of tidal waterways, mudflats, and small islands. A boat journey through the Sundarbans is an unforgettable adventure.',
+        images: [
+            '/images/destinations/sundarbans-1.jpg',
+            '/images/destinations/sundarbans-2.jpg',
+            '/images/destinations/sundarbans-3.jpg',
+        ],
+        hypePercentage: 94,
+        bestSeason: ['Nov', 'Dec', 'Jan', 'Feb'],
+        activities: ['Boat Safari', 'Wildlife Watching', 'Bird Watching', 'Photography', 'Forest Walk'],
+        entryFee: { local: 500, foreign: 2000 },
+        permitRequired: true,
+        openingHours: 'Tour packages (2-3 days)',
+        visitDuration: '2-3 days',
+        coordinates: { lat: 21.9497, lng: 89.1833 },
+        nearbySpots: ['karamjal', 'katka', 'hiron-point'],
+        facilities: ['Tour Operators', 'Boat Service', 'Guide Service', 'Accommodation on Boat'],
+        bestFor: ['Wildlife Enthusiasts', 'Adventure Seekers', 'Nature Photographers'],
+        tags: ['mangrove', 'tiger', 'unesco', 'wildlife', 'adventure'],
+        reviews: 4.8,
+        totalReviews: 7234,
+    },
+
+    // Kuakata (Patuakhali)
+    {
+        id: 'kuakata-beach',
+        name: 'Kuakata Beach',
+        nameBn: 'কুয়াকাটা সৈকত',
+        district: 'patuakhali',
+        slug: 'kuakata-beach',
+        type: 'beach',
+        description: 'The Daughter of the Sea - a unique beach where you can see both sunrise and sunset from the same spot.',
+        longDescription: 'Kuakata is one of the rare beaches in the world from where you can see both the sunrise and sunset from the same spot. It is located in the southwestern coastal belt of Bangladesh. The beach is 18 km long and 3 km wide. The name "Kuakata" came from the word "Kua" (well in Bengali), as the early settlers dug wells for drinking water.',
+        images: [
+            '/images/destinations/kuakata-1.jpg',
+            '/images/destinations/kuakata-2.jpg',
+        ],
+        hypePercentage: 91,
+        bestSeason: ['Nov', 'Dec', 'Jan', 'Feb', 'Mar'],
+        activities: ['Sunrise Viewing', 'Sunset Viewing', 'Beach Walk', 'Swimming', 'Photography'],
+        entryFee: { local: 0, foreign: 0 },
+        openingHours: '24/7',
+        visitDuration: '1-2 days',
+        coordinates: { lat: 21.8077, lng: 90.1251 },
+        nearbySpots: ['lebur-forest', 'fatrar-char', 'gangamati-reserved-forest'],
+        facilities: ['Hotels', 'Restaurants', 'Beach Activities'],
+        bestFor: ['Beach Lovers', 'Photographers', 'Families'],
+        tags: ['beach', 'sunrise', 'sunset', 'unique', 'scenic'],
+        reviews: 4.6,
+        totalReviews: 4932,
+    },
+];
+
+// Helper functions
+export const getDestinationBySlug = (district, slug) => {
+    return destinations.find(d => d.district === district && d.slug === slug);
+};
+
+export const getDestinationsByDistrict = (districtSlug) => {
+    return destinations.filter(d => d.district === districtSlug);
+};
+
+export const getDestinationsByType = (type) => {
+    return destinations.filter(d => d.type === type);
+};
+
+export const getFeaturedDestinations = (limit = 6) => {
+    return destinations
+        .sort((a, b) => b.hypePercentage - a.hypePercentage)
+        .slice(0, limit);
+};
+
+export const searchDestinations = (query) => {
+    const lowercaseQuery = query.toLowerCase();
+    return destinations.filter(d =>
+        d.name.toLowerCase().includes(lowercaseQuery) ||
+        d.description.toLowerCase().includes(lowercaseQuery) ||
+        d.tags.some(tag => tag.includes(lowercaseQuery))
+    );
+};
+
+export const getDestinationTypes = () => {
+    const types = [...new Set(destinations.map(d => d.type))];
+    return types;
+};
+
+export default destinations;
