@@ -15,7 +15,10 @@ export const agencies = [
         totalReviews: 342,
         established: '2015',
         license: 'TOUR-BD-2022-1234',
+        district: 'dhaka',
         location: 'Dhaka, Bangladesh',
+        priceRange: '৳৳৳',
+        toursCompleted: 1500,
         contact: {
             phone: '+880 1700-000000',
             email: 'info@bdtours.com',
@@ -63,7 +66,10 @@ export const agencies = [
         totalReviews: 218,
         established: '2018',
         license: 'TOUR-BD-2023-5678',
+        district: 'chittagong',
         location: 'Chittagong, Bangladesh',
+        priceRange: '৳৳',
+        toursCompleted: 450,
         contact: {
             phone: '+880 1800-111111',
             email: 'info@adventurebd.com',
@@ -101,7 +107,10 @@ export const agencies = [
         totalReviews: 156,
         established: '2019',
         license: 'TOUR-BD-2023-9012',
+        district: 'khulna',
         location: 'Khulna, Bangladesh',
+        priceRange: '৳৳৳',
+        toursCompleted: 320,
         contact: {
             phone: '+880 1900-222222',
             email: 'contact@ecotourismbd.com',
