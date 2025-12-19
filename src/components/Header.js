@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { Menu, X, Sun, Moon, ChevronDown, LogOut } from "lucide-react";
+import { Menu, X, Sun, Moon, ChevronDown, LogOut, Search } from "lucide-react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { FaCartPlus, FaUserCircle } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
@@ -10,10 +10,11 @@ import { useTheme } from "../contexts/ThemeContext";
 import Image from "next/image";
 import axios from "@/lib/axios";
 import { useCampus } from "@/contexts/CampusContext";
-import SearchBox from "./SearchBox";
+import GlobalSearch from "./shared/GlobalSearch";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [userName, setUserName] = useState("");
   const [role, setRole] = useState("");
@@ -126,7 +127,6 @@ const Header = () => {
 
             {/* Centered Search Bar - Enhanced for Desktop */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden md:flex lg:flex flex-grow max-w-3xl lg:mx-6 flex-col items-center w-full">
-              {/* <div className="w-full 2xl:ml-9"> */}
               <div className="flex items-center  text-sm mb-1">
                 <IoLocationSharp className="text-base text-white" />
                 <span
@@ -136,8 +136,15 @@ const Header = () => {
                   {selectedCampus ? selectedCampus.name : "Select Campus"}
                 </span>
               </div>
-              <SearchBox />
-              {/* </div> */}
+              <div className="w-full max-w-2xl">
+                <button
+                  onClick={() => setIsSearchOpen(true)}
+                  className="w-full flex items-center gap-2 px-4 py-2.5 bg-white text-gray-500 rounded-lg hover:bg-gray-50 transition-colors text-sm"
+                >
+                  <Search className="w-4 h-4" />
+                  <span>Search destinations, hotels, agencies, events...</span>
+                </button>
+              </div>
             </div>
 
             <div className=" flex flex-col items-end justify-center gap-1 2xl:gap-0">
@@ -237,9 +244,8 @@ const Header = () => {
 
         {/* Mobile Menu - Improved Layout */}
         <div
-          className={`md:hidden fixed inset-0 bg-black/45 bg-opacity-50 transform ${
-            isMenuOpen ? "translate-x-0" : "-translate-x-full"
-          } transition-transform duration-300 ease-in-out z-50`}
+          className={`md:hidden fixed inset-0 bg-black/45 bg-opacity-50 transform ${isMenuOpen ? "translate-x-0" : "-translate-x-full"
+            } transition-transform duration-300 ease-in-out z-50`}
           onClick={() => setIsMenuOpen(false)}
         >
           <div
@@ -272,9 +278,18 @@ const Header = () => {
             </div>
 
             {/* Search Section */}
-            {/* <div className="p-4 border-b border-gray-200">
-            <SearchBox />
-          </div> */}
+            <div className="p-4 border-b border-gray-200">
+              <button
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  setIsSearchOpen(true);
+                }}
+                className="w-full flex items-center gap-2 px-4 py-2.5 bg-gray-100 text-gray-500 rounded-lg hover:bg-gray-200 transition-colors text-sm"
+              >
+                <Search className="w-4 h-4" />
+                <span>Search...</span>
+              </button>
+            </div>
 
             {/* Main Actions */}
             <div className=" flex flex-col items-start p-4 space-y-4">
@@ -383,8 +398,16 @@ const Header = () => {
         </div>
       </header>
       <div className="md:hidden px-4 py-4 bg-primary ">
-        <SearchBox />
+        <button
+          onClick={() => setIsSearchOpen(true)}
+          className="w-full flex items-center gap-2 px-4 py-2.5 bg-white text-gray-500 rounded-lg border border-border hover:bg-gray-50 transition-colors text-sm"
+        >
+          <Search className="w-4 h-4" />
+          <span>Search...</span>
+        </button>
       </div>
+
+      <GlobalSearch isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
     </div>
   );
 };

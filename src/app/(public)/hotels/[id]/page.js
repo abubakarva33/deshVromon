@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { hotels, getHotelById } from '@/data/hotels';
 import HotelCard from '@/components/hotels/HotelCard';
+import HotelReviews from '@/components/hotels/HotelReviews';
 
 export async function generateStaticParams() {
     return hotels.map((hotel) => ({
@@ -250,6 +251,9 @@ export default function HotelDetailPage({ params }) {
                         </div>
                     </div>
                 </div>
+
+                {/* Reviews Section */}
+                <HotelReviews hotelId={hotel.id} />
 
                 {/* Similar Hotels */}
                 {similarHotels.length > 0 && (
