@@ -1,28 +1,12 @@
-import HomePage from "@/components/HomePage";
+
 
 export const dynamic = "force-dynamic";
 
-export default async function Home() {
-  // Fetch all data in parallel for efficiency
-  const [categoriesRes, bannerRes, productsRes, hotCatRes] = await Promise.all([
-    fetch("http://localhost:3000/api/v1/category?parent_exists=false"),
-    fetch("http://localhost:3000/api/v1/banner?select=-campus -createdAt -updatedAt"),
-    fetch("http://localhost:3000/api/v1/product/best-selling?limit=5"),
-    fetch("http://localhost:3000/api/v1/hot-category?select=-category -createdAt -updatedAt"),
-  ]);
-
-  const productsData = await productsRes.json();
-  const categoriesData = await categoriesRes.json();
-  const bannerData = await bannerRes.json();
-  const hotCategoryData = await hotCatRes.json();
-
+export default function Home() {
   return (
-    // <HomePageDummy />
-    <HomePage
-      productsData={productsData.data || []}
-      categoriesData={categoriesData.data || []}
-      bannerData={bannerData.data || []}
-      hotCategoryData={hotCategoryData.data || []}
-    />
+    <div className="flex min-h-screen flex-col items-center justify-center p-24">
+      <h1 className="text-4xl font-bold">Project Setup Complete</h1>
+      <p className="mt-4">Basic setup is running. You can now start building.</p>
+    </div>
   );
 }

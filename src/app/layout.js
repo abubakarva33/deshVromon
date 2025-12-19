@@ -1,8 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { CampusProvider } from "../contexts/CampusContext";
-import { ThemeProvider } from "../contexts/ThemeContext";
-import LayoutWrapper from "../components/LayoutWrapper";
 import { Toaster } from "sonner";
 
 export const metadata = {
@@ -46,13 +43,9 @@ const geistMono = Geist_Mono({
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <ThemeProvider>
-          <CampusProvider>
-            <LayoutWrapper>{children}</LayoutWrapper>
-          </CampusProvider>
-        </ThemeProvider>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} suppressHydrationWarning>
+        {children}
         <Toaster
           position="top-center"
           richColors
